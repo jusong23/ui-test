@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="34e-76-SvS">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="VDr-OX-gct">
+            <objects>
+                <viewController id="34e-76-SvS" customClass="ViewController" customModule="ExampleTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ULn-UT-cBD">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="NW5-33-pR9">
+                                <rect key="frame" x="20" y="97" width="350" height="204"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sH6-dC-q7f">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="34"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="emailTF"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gm4-b1-SDQ">
+                                        <rect key="frame" x="0.0" y="85" width="350" height="34"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="passwordTF"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repeat Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7qV-65-XJv">
+                                        <rect key="frame" x="0.0" y="170" width="350" height="34"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="repeatPasswordTF"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Gm4-b1-SDQ" secondAttribute="trailing" id="CwM-HW-Wuv"/>
+                                    <constraint firstAttribute="trailing" secondItem="sH6-dC-q7f" secondAttribute="trailing" id="gTG-vk-Yh6"/>
+                                    <constraint firstAttribute="trailing" secondItem="7qV-65-XJv" secondAttribute="trailing" id="zcN-aH-LAj"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWH-Yf-3Ri">
+                                <rect key="frame" x="168" y="407" width="54" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="signupButton"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="tapSignupButton:" destination="34e-76-SvS" eventType="touchUpInside" id="PjX-oE-VWe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8nX-Jq-FUo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NW5-33-pR9" firstAttribute="leading" secondItem="8nX-Jq-FUo" secondAttribute="leading" constant="20" id="INW-6Z-9jN"/>
+                            <constraint firstItem="NW5-33-pR9" firstAttribute="top" secondItem="8nX-Jq-FUo" secondAttribute="top" constant="50" id="UFu-Qp-6h2"/>
+                            <constraint firstItem="hWH-Yf-3Ri" firstAttribute="centerX" secondItem="ULn-UT-cBD" secondAttribute="centerX" id="Yqx-s6-N6q"/>
+                            <constraint firstItem="8nX-Jq-FUo" firstAttribute="trailing" secondItem="NW5-33-pR9" secondAttribute="trailing" constant="20" id="jku-gX-BUX"/>
+                            <constraint firstItem="hWH-Yf-3Ri" firstAttribute="centerY" secondItem="ULn-UT-cBD" secondAttribute="centerY" id="pPA-Jo-8SS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailTF" destination="sH6-dC-q7f" id="Trh-dy-8Pk"/>
+                        <outlet property="passwordTF" destination="Gm4-b1-SDQ" id="43a-gJ-kNf"/>
+                        <outlet property="repeatTF" destination="7qV-65-XJv" id="huh-OA-ZQc"/>
+                        <outlet property="signupButton" destination="hWH-Yf-3Ri" id="74A-j7-6Hk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XKj-aB-wuj" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-277" y="31"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
